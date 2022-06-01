@@ -6,7 +6,7 @@ const screenshot = require('./screenshot')
 app.get('/status', (req, res) => res.status(200).json({ status: 'ok' }))
 app.get('/', function (req, res, next) {
     res.set('Content-Type', 'text/html');
-    res.send(Buffer.from("<form action='/screenshot'><input name=query></form>"))
+    res.send(Buffer.from("<form action='/screenshot'><input name=url></form>"))
   });
 
 app.get('/screenshot', (req, res) => {
